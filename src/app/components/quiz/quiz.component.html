@@ -1,0 +1,20 @@
+<div>
+    <div id="quizbox">
+        <div class="questionbox">
+            <div class="question">
+                <h2> {{questionSelected.question}}</h2>
+            </div>
+        </div>
+        <div class="awnserbox">
+
+            <button class="button" *ngFor="let option of questionSelected.options; let i = index" (click)="selectAnswer(option.alias)" >
+                {{option.text}}
+            </button>
+        </div>
+    </div>
+
+    <div id="resultbox">
+        <h2 id="result"> {{results}}% </h2>
+        <div id="successbar"></div>
+    </div>
+</div>
